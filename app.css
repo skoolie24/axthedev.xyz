@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap');
+
+@import url("https://fonts.googleapis.com/css?family=Fira+Sans&display=swap");
+
+
+
+html {
+   --theme-primary:  rgb(2, 179, 96);
+  --theme-on-primary:  #ffffff;
+  --theme-background: rgb(0, 0, 0);
+  --theme-secondary:  #e30425;
+  --theme-on-secondary:  #ffffff; 
+  --typography-font-family: "Oxygen", sans-serif;
+  height: 100%;
+  margin: 0;
+}
+
+@keyframes bgmove {
+  from {background-position: 0% 0%;}
+  to {background-position: 100% 100%;}
+}
+
+body {
+    background-color: var(--theme-background);
+    height: 100%;
+    font-family: var(--typography-font-family);
+    align-items: center;
+    justify-content: center;
+    background-image: radial-gradient(#003470 20%, transparent 10%);
+    background-position: 0 0, 0% 0%;
+    background-size: 7px 7px;
+    color: var(--theme-on-primary);
+    overflow: hidden;
+    animation-name: bgmove;
+    animation-duration: 50s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+main { 
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+button {
+  border-radius: 10px;
+  cursor: pointer;
+  color: var(--theme-on-primary);
+  width: 190px;
+  height: 45px;
+  font-size: 14;
+  margin-inline: 10px;
+  margin-bottom: 100px;
+}
+
+.buttonhighlighted {
+  border: none;
+  background-color: var(--theme-primary);
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.buttonplain {
+  border: 1px solid var(--theme-on-primary);
+  background-color: transparent;
+  color: #ffffff;
+  text-decoration: none;
+}
+.buttonplain:hover {
+  background-color: var(--theme-on-primary);
+  border-color: var(--theme-on-primary);
+  color: black;
+}
+div.buttonrow {
+  display: flex;
+  padding-top: 40px;
+  flex-direction: row;
+}
+div.titleandsub {
+  padding: 0px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+h1.titletext {
+  font-size: 4.6em;
+  padding: 0px;
+}
